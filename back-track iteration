@@ -22,3 +22,5 @@ void iterativeBacktrack ()  
         }  
     }  
 }  
+
+//website:  http://blog.csdn.net/jarvischu/article/details/16067319
