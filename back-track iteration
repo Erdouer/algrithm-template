@@ -1,0 +1,24 @@
+//针对N叉树的迭代回溯方法  
+void iterativeBacktrack ()  
+{  
+    int t=1;  
+    while (t>0) {  
+        if(ExistSubNode(t)) //当前节点的存在子节点  
+        {  
+            for i = 1 to k  //遍历当前节点的所有子节点  
+            {  
+                x[t]=value(i);//每个子节点的值赋值给x  
+                if (constraint(t)&&bound(t))//满足约束条件和限界条件   
+                {  
+                    //solution表示在节点t处得到了一个解  
+                    if (solution(t)) output(x);//得到问题的一个可行解，输出  
+                    else t++;//没有得到解，继续向下搜索  
+                }  
+            }  
+        }  
+        else //不存在子节点，返回上一层  
+        {  
+            t--;  
+        }  
+    }  
+}  
